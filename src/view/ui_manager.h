@@ -16,6 +16,10 @@ public:
     void viewHomePage();
     void viewLoginPage();
     void viewRegisterPage();
+
+    void viewDoctorOptions();
+    void viewPatientOptions();
+    void viewAdminOptions();
 };
 
 #endif

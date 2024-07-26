@@ -24,14 +24,30 @@ void ui_manager::viewLoginPage(){
     std::cout<<returnMessage;
 }
 
-void ui_manager::viewRegisterPage(){
-    std::string returnMessage;
-    int option;
-    std::cout<<"Do you want to register as a\n1- Patient\n2- Doctor\n3- Admin";
-    std::cin>>option;
-    getUserDetails();
-    returnMessage=userService.reg(user,option);
-    std::cout<<returnMessage;
+void ui_manager::viewRegisterPage() {
+  std::string returnMessage;
+  int option;
+  std::cout << "Do you want to register as a\n1- Patient\n2- Doctor\n3- Admin";
+  std::cin >> option;
+  getUserDetails();
+  returnMessage = userService.reg(user, option);
+  std::cout << returnMessage;
+}
+void ui_manager::viewDoctorOptions() {
+    std::cout << "1. view schedule" << std::endl;
+    std::cout << "2. update schedule" << std::endl;
+    std::cout << "3. view patient" << std::endl;
+    std::cout << "4. update medical record" << std::endl;
+    std::cout << "5. view profile" << std::endl;
+}
+void ui_manager::viewPatientOptions() {
+    std::cout << "1. view medical history" << std::endl;
+    std::cout << "2. book appointment" << std::endl;
+    std::cout << "3. view profile" << std::endl;
+}
+
+void ui_manager::viewAdminOptions() {
+
 }
 
 void ui_manager::getUserDetails() {
