@@ -1,5 +1,9 @@
 #include <authenticator.h>
 
+static const int PATIENT_OPTION=1;
+static const int DOCTOR_OPTION=2;
+static const int ADMIN_OPTION=3;
+
 std::optional<Doctor> Authenticator::queryForDoctor(std::string email) {
 	auto doctors = db_manager.getAllDoctors();
 	for (const auto &doctor : doctors) {
@@ -54,4 +58,11 @@ bool Authenticator::authenticate(User &user) {
     }
 
     return false;
+}
+void Authenticator::addUser(User& user,int userType){
+    switch(userType){
+        case PATIENT_OPTION: db_manager.addPatient(static_cast<const Patient &>(user));break;
+        case DOCTOR_OPTION: db_manager.addDoctor(static_cast<const Doctor &>(user));break;
+        case ADMIN_OPTION: db_manager.addAdmin(static_cast<const Admin &>(user));break;
+    }
 }
