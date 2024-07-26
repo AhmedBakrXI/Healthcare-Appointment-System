@@ -69,11 +69,20 @@ bool DBManager::removeAdmin(int id) {
 }
 
 std::optional<Admin> DBManager::getAdmin(int id) {
-    std::optional<Admin> result;
-    for (int i = 0; i < db.admins.size(); i++) {
-        if (db.admins[i].getID() == id) {
-            return db.admins[i];
-        }
-    }
-    return std::nullopt;
+	std::optional<Admin> result;
+	for (int i = 0; i < db.admins.size(); i++) {
+		if (db.admins[i].getID() == id) {
+			return db.admins[i];
+		}
+	}
+	return std::nullopt;
+}
+std::vector<Doctor> DBManager::getAllDoctors() {
+	return db.doctors;
+}
+std::vector<Patient> DBManager::getAllPatients() {
+	return db.patients;
+}
+std::vector<Admin> DBManager::getAllAdmins() {
+	return db.admins;
 }

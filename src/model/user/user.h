@@ -20,6 +20,7 @@ public:
 	Profile getProfile() const;
 
 	void setProfile(const Profile &newprofile);
+	std::string getPassword();
 };
 
 #endif 

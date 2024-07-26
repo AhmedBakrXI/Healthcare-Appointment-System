@@ -21,7 +21,9 @@ Profile User::getProfile() const
     return profile;
 }
 
-void User::setProfile(const Profile &newprofile)
-{
-    profile = newprofile;
+void User::setProfile(const Profile &newprofile) {
+	profile = newprofile;
+}
+std::string User::getPassword() {
+	return password;
 }
