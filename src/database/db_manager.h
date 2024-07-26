@@ -9,6 +9,7 @@
 #include "../model/user/patient.h"
 #include "../model/user/user.h"
 #include "db.h"
+#include "doctor_service.h"
 
 class DBManager {
 private:
@@ -33,6 +34,11 @@ public:
 	std::vector<Doctor> getAllDoctors();
 	std::vector<Patient> getAllPatients();
 	std::vector<Admin> getAllAdmins();
+
+	bool updateDoctorSchedule(int get_id, const Schedule &schedule);
+
+	std::optional<Medical_Record> getMedicalRecord(int get_id);
+	bool updateMedicalRecord(int get_id, const Medical_Record & record);
 };
 
 #endif /* __DB_MANAGER_H__ */

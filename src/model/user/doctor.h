@@ -12,6 +12,7 @@ public:
     Doctor(int id, const std::string& email, const std::string& password, const Profile& profile, Schedule& schedule );
     
     Schedule getSchedule();
+	void setSchedule(const Schedule &);
 
     int doctorgetID() const;
 

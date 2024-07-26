@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __PATIENT_SERVICE_H__
+#define __PATIENT_SERVICE_H__
 
 #include "../database/db_manager.h"
 #include "../time/appointment.h"
@@ -24,3 +25,5 @@ class PatientService {
 	// Function to book an appointment for the patient with a specified doctor
 	bool bookAppointment(int doctorId, const Appointment &appointment);
 };
+
+#endif

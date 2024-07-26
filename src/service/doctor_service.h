@@ -2,7 +2,6 @@
 #define DOCTOR_SERVICE_H
 
 #include "../time/appointment.h"
-#include "../time/medical_history.h"
 #include "../time/medical_record.h"
 #include "../time/schedule.h"
 #include "../user/doctor.h"

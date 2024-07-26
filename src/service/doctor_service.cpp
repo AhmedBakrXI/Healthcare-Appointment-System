@@ -42,9 +42,9 @@ bool doctorService::updateSchedule(const Schedule &newSchedule) {
 
 // Function to update a patient's medical record
 bool doctorService::updateMedicalRecord(const Medical_Record &record) {
-	Medical_Record optionalRecord = dbManager.getMedicalRecord(record.getID());
+	auto optionalRecord = dbManager.getMedicalRecord(record.getId());
 
-	if (!optionalRecord.has_value()) {
+	if (optionalRecord.has_value()) {
 		std::cerr << "Record not found!" << std::endl;
 		return false;
 	}
