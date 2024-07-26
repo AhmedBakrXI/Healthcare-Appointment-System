@@ -1,17 +1,15 @@
 #pragma once
 #include "../user/user.h"
 
-class Admin:User{
+class Admin : public User {
+public:
+	Admin(int id, const std::string &email, const std::string &password, const Profile &profile);
 
-    public:
-   
-    Admin(int id, const std::string &email, const std::string &password, const Profile &profile);
+	int admingetID() const;
 
-    int admingetID() const;
+	std::string admingetEmail() const;
 
-    std::string admingetEmail() const;
+	Profile admingetProfile() const;
 
-    Profile admingetProfile() const;
-
-    void adminsetProfile(const Profile &newprofile);
+	void adminsetProfile(const Profile &newprofile);
 };

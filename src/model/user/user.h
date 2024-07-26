@@ -1,25 +1,22 @@
 #pragma once
+#include "../profile/profile.h"
 #include <string>
-#include  "../profile/profile.h"
 
-class User
-{
+class User {
 private:
-    int id;
-    std::string email;
-    std::string password;
-    Profile profile;
+	int id;
+	std::string email;
+	std::string password;
+	Profile profile;
 
 public:
-    User(int id, const std::string& email, const std::string& password, const Profile& profile);
+	User(int id, const std::string &email, const std::string &password, const Profile &profile);
 
-    int getID() const;
+	int getID() const;
 
-    std::string getEmail() const;
- 
+	std::string getEmail() const;
 
-    Profile getProfile() const;
+	Profile getProfile() const;
 
-    void setProfile(const Profile &newprofile);
+	void setProfile(const Profile &newprofile);
 };
- 

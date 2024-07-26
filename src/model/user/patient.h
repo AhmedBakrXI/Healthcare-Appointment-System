@@ -1,23 +1,22 @@
 #pragma once
-#include "../user/user.h"
 #include "../time/medical_history.h"
+#include "../user/user.h"
 
-
-
-class Patient:User{
+class Patient : public User {
 private:
-    Medical_History history;
-    
+	Medical_History history;
+
 public:
-    Patient(int id, const std::string& email, const std::string& password, const Profile& profile, const Medical_History& history );
+	Patient(int id, const std::string &email, const std::string &password, const Profile &profile,
+	    const Medical_History &history);
 
-    Medical_History gethistory() const;
-    
-    int patientgetID() const;
+	Medical_History gethistory() const;
 
-    std::string patientgetEmail() const;
+	int patientgetID() const;
 
-    Profile patientgetProfile() const;
+	std::string patientgetEmail() const;
 
-    void patientsetProfile(const Profile &newprofile);
-}; 
+	Profile patientgetProfile() const;
+
+	void patientsetProfile(const Profile &newprofile);
+};

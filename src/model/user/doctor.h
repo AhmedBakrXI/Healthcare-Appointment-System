@@ -2,7 +2,7 @@
 #include "../user/user.h"
 #include "../time/schedule.h"
 
-class Doctor:User{
+class Doctor : public User{
 private:
     Schedule schedule;
     
