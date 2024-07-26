@@ -25,7 +25,6 @@ std::string UserService::reg(const User &user,int userType) {
     }
     if(userOptional.has_value()){
         returnMessage="Account already exists try another email\n";
-        exit(0);
     }
     else{
         returnMessage="Registration successful\n";
