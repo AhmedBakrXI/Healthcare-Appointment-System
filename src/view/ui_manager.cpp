@@ -73,6 +73,7 @@ void ui_manager::viewDoctorOptions() {
     std::cout << "3. view patient" << std::endl;
     std::cout << "4. update medical record" << std::endl;
     std::cout << "5. view profile" << std::endl;
+    /*TODO: call proper APIs for each case*/
 }
 
 void ui_manager::viewPatientOptions() {
@@ -81,6 +82,7 @@ void ui_manager::viewPatientOptions() {
     std::cout << "2. book appointment\n";
     std::cout << "3. view profile\n";
     std::cin>>option;
+    /*TODO: call proper APIs for each case*/
     switch (option) {
         case 1:
             ;break;
@@ -93,7 +95,11 @@ void ui_manager::viewPatientOptions() {
 }
 
 void ui_manager::viewAdminOptions() {
-
+    std::cout << "1. view patient\n";
+    std::cout << "2. update patient\n";
+    std::cout << "3. view doctor\n";
+    std::cout << "3. update doctor\n";
+    /*TODO: call proper APIs for each case*/
 }
 
 void ui_manager::getUserDetails() {
