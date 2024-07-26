@@ -1,15 +1,12 @@
 #ifndef __DB_MANAGER_H__
 #define __DB_MANAGER_H__
 
-#include <stdio.h>
 #include <vector>
 
 #include "../model/user/admin.h"
 #include "../model/user/doctor.h"
 #include "../model/user/patient.h"
-#include "../model/user/user.h"
 #include "db.h"
-#include "doctor_service.h"
 
 class DBManager {
 private:
