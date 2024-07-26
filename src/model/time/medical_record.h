@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __MEDICAL_RECORD_H__
+#define __MEDICAL_RECORD_H__
+
 #include <string>
 #include <ctime>
 #include <sstream>
@@ -22,3 +24,5 @@ public:
 
 
 };
+
+#endif 

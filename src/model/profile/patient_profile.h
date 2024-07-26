@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __PATIENT_PROFILE_H__
+#define __PATIENT_PROFILE_H__
 #include <string>
 #include "../profile/profile.h"
 
@@ -13,3 +14,5 @@ public:
 
     void patientsetName(const std::string& newName);
 };
+
+#endif 

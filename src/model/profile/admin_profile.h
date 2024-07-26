@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __ADMIN_PROFILE_H__
+#define __ADMIN_PROFILE_H__
+
 #include <string>
 #include "../profile/profile.h"
 
@@ -12,3 +14,5 @@ public:
 
     void adminsetName(const std::string& newName);
 };
+
+#endif 

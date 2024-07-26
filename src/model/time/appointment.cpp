@@ -2,8 +2,8 @@
 
 using namespace std;
 
-Appointment::Appointment(int id, const optional<Patient> &patient, const optional<Doctor> &doctor, const tm &date)
-    : id(id), patient(patient), doctor(doctor), date(date) {}
+Appointment::Appointment(int id, const optional<int> &patient, const optional<int> &doctor, const tm &date)
+    : id(id), patient_id(patient), doctor_id(doctor), date(date) {}
 
 int Appointment::getId() const
 {

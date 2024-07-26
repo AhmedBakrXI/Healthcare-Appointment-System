@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __USER_H__
+#define __USER_H__
 #include "../profile/profile.h"
 #include <string>
 
@@ -20,3 +21,5 @@ public:
 
 	void setProfile(const Profile &newprofile);
 };
+
+#endif 

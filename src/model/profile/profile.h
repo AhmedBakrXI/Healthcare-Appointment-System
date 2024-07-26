@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __PROFILE_H__
+#define __PROFILE_H__
 #include <string>
 
 class Profile {
@@ -13,3 +14,4 @@ public:
 
 };
 
+#endif 

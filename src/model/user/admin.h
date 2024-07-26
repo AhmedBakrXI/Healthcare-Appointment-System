@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __ADMIN_H__
+#define __ADMIN_H__
 #include "../user/user.h"
 
 class Admin : public User {
@@ -13,3 +14,5 @@ public:
 
 	void adminsetProfile(const Profile &newprofile);
 };
+
+#endif 

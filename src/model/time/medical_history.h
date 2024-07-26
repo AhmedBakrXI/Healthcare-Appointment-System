@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __MEDICAL_HISTORY_H__
+#define __MEDICAL_HISTORY_H__
+
 #include "medical_record.h"
 #include <vector>
 
@@ -16,3 +18,5 @@ public:
 
     void addMedicalRecord(const Medical_Record &record);
 };
+
+#endif 

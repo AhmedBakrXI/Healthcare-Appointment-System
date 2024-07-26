@@ -1,6 +1,6 @@
-#pragma once
-#include "../user/doctor.h"
-#include "../user/patient.h"
+#ifndef __APPOINTMENT_H__
+#define __APPOINTMENT_H__
+
 #include <optional>
 #include <ctime>
 #include <sstream>
@@ -10,12 +10,12 @@ class Appointment
 {
 private:
     int id;
-    std::optional<Patient> patient;
-    std::optional<Doctor> doctor;
+    std::optional<int> patient_id;
+    std::optional<int> doctor_id;
     std::tm date;
 
 public:
-    Appointment(int id, const std::optional<Patient> &patient, const std::optional<Doctor> &doctor, const std::tm &date);
+    Appointment(int id, const std::optional<int> &patient, const std::optional<int> &doctor, const std::tm &date);
 
     int getId() const;
 
@@ -23,3 +23,5 @@ public:
 
     void setDate(std::tm &new_date);
 };
+
+#endif 

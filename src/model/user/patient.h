@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __PATIENT_H__
+#define __PATIENT_H__
+
 #include "../time/medical_history.h"
 #include "../user/user.h"
 
@@ -20,3 +22,5 @@ public:
 
 	void patientsetProfile(const Profile &newprofile);
 };
+
+#endif 

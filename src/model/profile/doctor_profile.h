@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __DOCTOR_PROFILE_H__
+#define __DOCTOR_PROFILE_H__
+
 #include <string>
 #include "../profile/profile.h"
 
@@ -11,3 +13,5 @@ public:
 
     void doctorsetName(const std::string& newName);
 };
+
+#endif 
