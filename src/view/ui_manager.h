@@ -5,6 +5,8 @@
 #include "string"
 #include "iostream"
 #include "user_service.h"
+#include "patient_service.h"
+#include "db_manager.h"
 class ui_manager{
 private:
     User user;
