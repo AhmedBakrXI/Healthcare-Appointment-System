@@ -13,13 +13,15 @@ class DB
 {
 private:
     /* data */
-    static std::vector<Admin> admins;
-    static std::vector<Doctor> doctors;
-    static std::vector<Patient> patients;
+    std::vector<Admin> admins;
+    std::vector<Doctor> doctors;
+    std::vector<Patient> patients;
     friend class DBManager;
 public:
     DB(std::vector<Admin>, std::vector<Doctor>, std::vector<Patient>);
     ~DB();
+
+
 };
 
 #endif /* __DB_H__ */

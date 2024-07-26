@@ -9,29 +9,33 @@
 #include "db.h"
 
 class DBManager {
+private:
+	DB db;
 
 public:
+	DBManager(DB db);
+	~DBManager();
 
-	static void addDoctor(const Doctor &doctor);
-	static bool removeDoctor(int id);
-	static std::optional<Doctor> getDoctor(int id);
+	void addDoctor(const Doctor &doctor);
+	bool removeDoctor(int id);
+	std::optional<Doctor> getDoctor(int id);
 
-	static void addPatient(const Patient &patient);
-	static bool removePatient(int id);
-	static std::optional<Patient> getPatient(int id);
+	void addPatient(const Patient &patient);
+	bool removePatient(int id);
+	std::optional<Patient> getPatient(int id);
 
-	static void addAdmin(const Admin &admin);
-	static bool removeAdmin(int id);
-	static std::optional<Admin> getAdmin(int id);
+	void addAdmin(const Admin &admin);
+	bool removeAdmin(int id);
+	std::optional<Admin> getAdmin(int id);
 
-	static std::vector<Doctor> getAllDoctors();
-	static std::vector<Patient> getAllPatients();
-	static std::vector<Admin> getAllAdmins();
+	std::vector<Doctor> getAllDoctors();
+	std::vector<Patient> getAllPatients();
+	std::vector<Admin> getAllAdmins();
 
-	static bool updateDoctorSchedule(int get_id, const Schedule &schedule);
+	bool updateDoctorSchedule(int get_id, const Schedule &schedule);
 
-	static std::optional<Medical_Record> getMedicalRecord(int get_id);
-	static bool updateMedicalRecord(int get_id, const Medical_Record & record);
+	std::optional<Medical_Record> getMedicalRecord(int get_id);
+	bool updateMedicalRecord(int get_id, const Medical_Record & record);
 };
 
 #endif /* __DB_MANAGER_H__ */
