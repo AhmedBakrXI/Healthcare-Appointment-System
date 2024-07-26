@@ -27,3 +27,11 @@ void User::setProfile(const Profile &newprofile) {
 std::string User::getPassword() {
 	return password;
 }
+
+void User::setEmail(const string &email) {
+    User::email = email;
+}
+
+void User::setPassword(const string &password) {
+    User::password = password;
+}

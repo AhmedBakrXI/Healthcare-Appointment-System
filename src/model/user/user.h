@@ -21,6 +21,10 @@ public:
 
 	void setProfile(const Profile &newprofile);
 	std::string getPassword();
+
+    void setEmail(const std::string &email);
+
+    void setPassword(const std::string &password);
 };
 
 #endif 
