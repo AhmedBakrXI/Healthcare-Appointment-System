@@ -11,10 +11,10 @@
 #include "db.h"
 
 class DBManager {
-private:
+  private:
 	DB db;
 
-public:
+  public:
 	DBManager(DB db);
 	~DBManager();
 
@@ -33,6 +33,14 @@ public:
 	std::vector<Doctor> getAllDoctors();
 	std::vector<Patient> getAllPatients();
 	std::vector<Admin> getAllAdmins();
+
+	/*TODO: add functions
+
+	updateMedicalRecord(MedicalRecord record)
+	updateDoctorSchedule(int docId, Schedule newSchedule)
+	getMedicalRecord(int id)
+
+	*/
 };
 
 #endif /* __DB_MANAGER_H__ */
