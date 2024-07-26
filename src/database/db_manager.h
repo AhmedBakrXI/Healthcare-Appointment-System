@@ -29,6 +29,10 @@ public:
 	void addAdmin(const Admin &admin);
 	bool removeAdmin(int id);
 	std::optional<Admin> getAdmin(int id);
+
+	std::vector<Doctor> getAllDoctors();
+	std::vector<Patient> getAllPatients();
+	std::vector<Admin> getAllAdmins();
 };
 
 #endif /* __DB_MANAGER_H__ */

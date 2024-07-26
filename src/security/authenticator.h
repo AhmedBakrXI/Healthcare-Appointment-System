@@ -13,10 +13,10 @@ class Authenticator {
 private:
 	DBManager db_manager;
 
-	std::optional<Doctor> queryForDoctor(int id);
-	std::optional<Patient> queryForPatient(int id);
-	std::optional<Admin> queryForAdmin(int id);
-
+	std::optional<Doctor> queryForDoctor(std::string name);
+	std::optional<Patient> queryForPatient(std::string name);
+	std::optional<Admin> queryForAdmin(std::string name);
+	bool checkPassword(User user, std::string password);
 public:
 	explicit Authenticator(const DBManager &db_manager) : db_manager(db_manager) {}
 	bool authenticate(User& user);
